@@ -1,0 +1,521 @@
+* {
+margin: 0;
+box-sizing: border-box;
+text-decoration: none;
+}
+
+body {
+font-size: 100%;
+background: rgb(100, 32, 102);
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.header{
+width: 100%;
+max-width: 900px;
+padding: 8px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+}
+
+.cabecalho{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+padding: 15px;
+background-color: rgb(37, 1, 56);
+}
+
+.cabecalho-imagem{
+width: 85px;
+right: 85px;
+border-radius: 20px;
+border: 2px solid rgb(121, 92, 136);
+transition: all 0.5s;
+}
+
+.cabecalho-imagem:hover{
+-webkit-filter: drop-shadow(3px 3px 3px #b65154);
+filter: drop-shadow(3px 3px 3px #b65154);
+}
+
+.cabecalho-menu{
+display: flex;
+gap: 32px;
+}
+
+.cabecalho-menu-item{
+font-family: "Sarala" sans-serif; 
+color: #c8a0ee;
+font-weight: 400;
+font-size: 18px;
+}
+
+.conteudo{
+margin-bottom: 50px;
+padding: 4px 40px; 
+}
+
+.conteudo-primario{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center; 
+gap: 24px;
+margin-bottom: 50px;
+gap: 0.1px;
+padding: 4px 40px;
+}
+
+.conteudo-primario-titulo{
+padding-top: 50px;
+font-family: "Agbalumo", cursive;
+font-weight: 400;
+font-size: 24px;
+color: wheat;
+margin-bottom: 20px; 
+}
+
+.conteudo-primario-paragrafo{
+font-family:"Sarala", sans-serif;
+font-weight: medium;
+font-size: 20px;
+color:#c8a0ee;
+margin-bottom: 20px;
+white-space: pre-wrap;
+justify-content: center;
+text-align: center;
+}
+
+.slider{
+gap: 10px;
+position: relative;
+transform-style: preserve-3d;
+animation: rotate 30s linear infinite;
+margin: 0 auto; /* centralizar horizontalmente */
+width: 70px;
+height: 70px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+@keyframes rotate{
+    0%{
+    transform: perspective(1000px) rotateY(0deg);
+}
+    100%{
+    transform: perspective(1000px) rotateY(360deg);
+}
+}
+
+.slider span{
+position: absolute;
+top: 0;
+left: 0;
+width: 100px;
+height: 100px;
+transform-style: preserve-3d;
+transform: rotateY(calc(var(--i)*30deg)) translateZ(250px);
+flex-direction: row;
+align-items: center;
+text-align: center;
+}
+
+.slider span img{
+position: relative; /*inserir para deixar o texto abaixo*/
+top: 0;
+left: 0;
+width: 115px;
+height: 115px;
+border-radius: 60px;
+object-fit: cover;
+transition: 2s;
+border: 3px solid rgb(37, 1, 56);
+justify-content: space-between;
+transition: all 0.5s;
+}
+
+.slider span:hover img{
+transform: translateY(-30px) scale(1.1);
+-webkit-filter: drop-shadow(5px 10px 5px #b65154);
+filter: drop-shadow(5px 10px 5px #b65154);
+}
+
+.link-imagem-personagens{
+font-family:"Sarala", sans-serif;
+align-items: end;
+text-align:center;
+font-weight: 400;
+font-size: 9px;
+color:#201e22;;
+text-decoration: none;
+cursor: pointer;
+}
+
+.conteudo-imagem-personagens{
+width: 430px;
+right: 430px;
+border-radius: 120px;
+flex-direction: row;
+}
+
+.slider-02 {
+gap: 10px;
+position: relative;
+transform-style: preserve-3d;
+animation: rotate-02 30s linear infinite;
+margin: 0 auto; /* centralizar horizontalmente */
+width: 70px;
+height: 70px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-bottom: 150px;
+margin-top: 180px;
+}
+
+@keyframes rotate-02{
+    0%{
+    transform: perspective(1000px) rotateY(0deg);
+}
+    100%{
+    transform: perspective(1000px) rotateY(360deg);
+}
+}
+
+.slider-02 span{
+position: absolute;
+top: 0;
+left: 0;
+width: 100px;
+height: 100px;
+transform-style: preserve-3d;
+transform: rotateY(calc(var(--i)*30deg)) translateZ(250px);
+flex-direction: row;
+align-items: center;
+text-align: center; 
+}
+
+.slider-02 span img{
+position: relative; /*inserir para deixar o texto abaixo*/
+top: 0;
+left: 0;
+width: 115px;
+height: 115px;
+border-radius: 60px;
+object-fit: cover;
+transition: 2s;
+border: 3px solid rgb(37, 1, 56);
+justify-content: space-between;
+transition: all 0.5s;
+}
+
+.slider-02 span:hover img{
+transform: translateY(-30px) scale(1.1);
+-webkit-filter: drop-shadow(5px 10px 5px #b65154);
+filter: drop-shadow(5px 10px 5px #b65154);
+}
+
+.link-imagem-personagens-02 {
+font-family:"Sarala", sans-serif;
+align-items: end;
+text-align:center;
+font-weight: 400;
+font-size: 9px;
+color:#201e22;;
+text-decoration: none;
+cursor: pointer;
+}
+
+.conteudo-imagem-personagens-02 {
+width: 430px;
+right: 430px;
+border-radius: 120px;
+flex-direction: row;
+}
+
+.divisao-personagem{
+width: 100%;
+max-width: 900px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+flex-direction: row;
+justify-content: space-around;
+padding: 15px;
+box-sizing: border-box;
+border-radius: 25px;
+background-color: rgb(37, 1, 56);
+margin-bottom: 50px;
+}
+
+.personagem-titulo-principal-divisao{
+font-family: "Agbalumo", cursive;
+font-weight: 400;
+font-size: 24px;
+color: wheat;
+display: flex;
+justify-content: center;
+align-items: center;    
+}
+
+#molda-personagem{
+border: 2px solid rgb(121, 92, 136);
+margin-top: 50px;
+width: 600px;
+height: auto;
+border-radius: 20px;
+padding: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+align-items: center;
+margin: 0 auto; 
+}
+
+.personagem-escolhido {
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+flex-direction: column;
+gap: 10px;
+}
+    
+.personagem-titulo-principal{
+font-family: "Agbalumo", cursive;
+font-weight: 400;
+font-size: 24px;
+color: wheat;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.personagem-titulo-secundario{
+font-family:"Sarala", sans-serif;
+font-weight: medium;
+font-size: 20px;
+color:#c8a0ee;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.personagem-imagem{
+width: 200px;
+right: 200px;
+border-radius: 10px;
+border: 3px solid #bc81f3;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.personagem-paragrafo{
+font-family:"Sarala", sans-serif;
+font-weight: medium;
+font-size: 20px;
+color:#c8a0ee;
+justify-content:center;
+text-align: justify;
+}
+
+.molda-personagem-link{
+font-size: 20px;
+font-weight: medium;
+font-family:"Sarala", sans-serif;
+color:wheat;
+text-decoration: none;
+cursor: pointer;
+}
+
+.rodape {
+weidth: 100%;
+height: 60px;
+background-color: rgb(37, 1, 56);
+display: flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+flex-shrink: 0;
+position: relative;
+}
+
+.rodape-texto {
+font-family:"Sarala", sans-serif;
+font-family: bond;
+font-weight: 400;
+font-size: 18px;
+color:#c8a0ee;
+display: flex;
+align-items: center;
+}
+
+.rodape-imagem {
+margin: 0 8px;
+display: block;
+height: 50px;
+display: flex;
+justify-content: center;
+animation: pulsar 2s infinite alternate;
+}
+
+@keyframes pulsar {
+    0% {
+       transform: scale(.7);
+    }
+   
+    100% {
+       transform: scale(1.21);
+    }
+}
+
+/* responsividade */
+
+@media (max-width: 600px) {
+.cabecalho {
+flex-direction: column;
+align-items: flex-start;
+padding: 35px;
+gap: 10px;
+}
+
+.cabecalho-imagem {
+width: 50px;
+right: 50px;
+}
+
+.cabecalho-menu {
+flex-direction: column;
+gap: 16px;
+margin-top: 16px;
+}
+
+/*Faça o conteúdo primário se adaptar em dispositivos móveis:
+- Adicione um media query para dispositivos com largura menor que 600px*/
+.conteudo-primario {
+padding: 4px 16px;
+
+}
+    
+.conteudo-primario-titulo {
+padding-top: 20px;
+}
+    
+.conteudo-primario-paragrafo {
+font-size: 10px;
+}
+
+/*Torne o slider responsivo:
+- Adicione um media query para dispositivos com largura menor que 600px*/
+.slider, 
+.slider-02 {
+width: 50px;
+height: 50px;
+}
+.slider span img, 
+.slider-02 span img {
+width: 90px;
+height: 90px;
+}
+            
+/*Adapte a divisão dos personagens em dispositivos móveis:
+- Adicione um media query para dispositivos com largura menor que 600px:*/
+.divisao-personagem {
+flex-direction: row;
+align-items: center;
+text-align: center;
+}
+
+.personagem-titulo-principal-divisao {
+margin-bottom: 16px;
+}
+
+#molda-personagem {
+width: 100%;
+align-items: flex-start;
+}
+
+.rodape{
+width: 100%;
+align-items: flex-start; 
+}
+}  
+
+@media (max-width: 768px) {
+   
+.cabecalho {
+flex-direction: row;
+justify-content: space-around;
+padding: 35px;
+}
+           
+.cabecalho-imagem {
+width: 85px;
+right: 85px;
+}
+        
+.cabecalho-menu {
+flex-direction: row;
+gap: 16px;
+margin-top: 16px;
+}
+        
+/*Faça o conteúdo primário se adaptar em dispositivos móveis:
+- Adicione um media query para dispositivos com largura menor que 600px*/
+.conteudo-primario {
+padding: 4px 16px;
+}
+            
+.conteudo-primario-titulo {
+padding-top: 20px;
+}
+            
+.conteudo-primario-paragrafo {
+font-size: 18px;
+} 
+
+/*Torne o slider responsivo:
+- Adicione um media query para dispositivos com largura menor que 600px*/
+.slider, 
+.slider-02 {
+width: 90px;
+height: 90px;
+}
+        
+.slider span img, 
+.slider-02 span img {
+width: 110px;
+height: 110px;
+}
+                    
+/*Adapte a divisão dos personagens em dispositivos móveis:
+- Adicione um media query para dispositivos com largura menor que 600px:*/
+
+.divisao-personagem {
+flex-direction: row;
+align-items: flex-start;
+}
+        
+.personagem-titulo-principal-divisao {
+margin-bottom: 16px;
+}
+        
+#molda-personagem {
+width: 100%;
+align-items: flex-start;
+}
+}
+
+.rodape{
+width: 100%;
+align-items: flex-start; 
+}
